@@ -35,7 +35,7 @@ public class PongPanel extends JPanel implements ActionListener {
 		this.gameState = GameState.START_SCREEN;
 		setPreferredSize(new Dimension(1423, 800));
 		setBackground(Color.BLACK);
-		this.timer = new Timer(10, this);
+		this.timer = new Timer(9, this);
 		this.timer.start();
 
 		setupKeyBindings();

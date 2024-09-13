@@ -61,7 +61,7 @@ public class Ball {
 	}
 
 	public void resetSpeed() {
-		this.xSpeed = -2;
+		this.xSpeed = -4;
 		this.ySpeed = -2;
 	}
 	
