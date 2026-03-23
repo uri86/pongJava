@@ -104,17 +104,17 @@ public class PongPanel extends JPanel implements ActionListener {
 		Rectangle ballBounds = this.b.getBounds();
 		if (ballBounds.getMinY() < 0 || ballBounds.getMaxY() > getHeight()) {
 			this.b.bounceOffVertical();
-			Sound.play("./audio/hitWall.wav");
+			Sound.play("./src/audio/hitWall.wav");
 		}
 		if (ballBounds.getMinX() < 0) {
 			this.p2Score++;
-			Sound.play("./audio/hitWall.wav");
+			Sound.play("./src/audio/hitWall.wav");
 			this.timer.stop();
 			this.handleScoring();
 		}
 		if (ballBounds.getMaxX() > getWidth()) {
 			this.p1Score++;
-			Sound.play("./audio/hitWall.wav");
+			Sound.play("./src/audio/hitWall.wav");
 			this.timer.stop();
 			this.handleScoring();
 		}
@@ -126,7 +126,7 @@ public class PongPanel extends JPanel implements ActionListener {
 		if (this.p1.isHit(b) || this.p2.isHit(b)) {
 			this.b.bounceOffHorizontal();
 			this.b.randomAngleChange();
-			Sound.play("./audio/hitPlayer.wav");
+			Sound.play("./src/audio/hitPlayer.wav");
 		}
 	}
 
@@ -299,6 +299,6 @@ public class PongPanel extends JPanel implements ActionListener {
 		g.setColor(Color.WHITE);
 		g.setFont(new Font("Arial", Font.PLAIN, 20));
 		g.drawString("Press ENTER to Restart", 610, 350);
-		Sound.play("./audio/youWin.wav");
+		Sound.play("./src/audio/youWin.wav");
 	}
 }
